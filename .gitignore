@@ -1,0 +1,4 @@
+api/node_modules/
+fe/node_modules/
+fe/.editorconfig
+fe/.eslintrc.json
