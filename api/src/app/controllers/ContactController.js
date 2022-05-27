@@ -14,7 +14,7 @@ class ContactController {
     const contact = await ContactsRepository.findById(id);
     if (!contact) {
       //404: Not Found
-      return response.status(404).json({ error: "User not found" });
+      return response.status(404).json({ error: "Contact not found" });
     }
     response.json(contact);
   }
@@ -37,7 +37,7 @@ class ContactController {
       phone,
       category_id,
     });
-    response.json(contact);
+    response.status(201).json(contact);
   }
 
   async update(request, response) {
